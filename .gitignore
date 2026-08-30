@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+*.pth
+*.pth.tar
+.DS_Store
