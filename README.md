@@ -118,7 +118,7 @@ redistributed, and users remain bound by the source datasets' terms.
 |---|---|---|
 | Implementation | ✅ | ✅ |
 | Captions, pseudo labels, weights | ✅ deployed | ✅ all variants |
-| Model configurations | ✅ deployed | ✅ all 35 |
+| Model configurations | ✅ deployed | ✅ all 44 |
 | Evaluation + significance test | ✅ | ✅ |
 | Baseline integration | ✅ as a patch | ✅ full framework |
 | Training / ablation scripts | — | ✅ 54 |
