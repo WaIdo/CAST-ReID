@@ -2,8 +2,11 @@
 """Deterministic BatchNorm recalibration for a model-soup checkpoint.
 
 Uniform weight averaging invalidates BN running statistics (the averaged
-buffers do not describe the averaged weights' activations). LayerNorm models
-(CLIP) are unaffected; ResNet-50 soups drop 10+ mAP without this step.
+buffers do not describe the averaged weights' activations). The CLIP visual
+tower is LayerNorm-only, but the video wrapper adds a BatchNorm neck before
+the classifier, so ViT-B/16 does carry running statistics; the deployed
+ViT-B/16 soup nonetheless ships without recalibration. ResNet-50 soups drop
+10+ mAP without this step.
 
 Protocol (fixed, part of the method definition): reset every BN buffer, run
 one pass over the training set with the test-time spatial transform and a
