@@ -24,7 +24,7 @@
 +
 +
 +def _cast_setup(features_dim, optimizer, device):
-+    z = _np.load('$PROJ/cast/cast_anchors.npz')
++    z = _np.load(_os.path.expandvars('$PROJ/cast/cast_anchors.npz'))
 +    _CAST['T_id'] = _t.tensor(z['T_id']).float().to(device)
 +    _CAST['T_cl'] = _t.tensor(z['T_cl']).float().to(device)
 +    _CAST['W'] = _t.tensor(z['W']).float().to(device)
